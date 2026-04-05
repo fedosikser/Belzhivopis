@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Не Просто Живопись</title>
+    <meta
+      name="description"
+      content="Промо-сайт выставки «Не Просто Живопись» — переосмысление привычных образов белорусских живописцев."
+    />
+    <link rel="preload" href="./шрифты/Gerhaus.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./шрифты/Fornire-Light.otf" as="font" type="font/otf" crossorigin />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__top">
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+            <img src="./ассеты/меню.svg" alt="" aria-hidden="true" />
+            <span>Меню</span>
+          </button>
+
+          <a class="brand" href="#hero" aria-label="На главную">
+            <span class="brand__title">БелЖивапіс</span>
+            <span class="brand__subtitle">Минск</span>
+          </a>
+
+          <button class="search-toggle" type="button" aria-label="Поиск">
+            <span>Поиск</span>
+            <img src="./ассеты/лупа.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
+
+        <div class="site-header__bottom">
+          <a href="#about">Новости</a>
+          <a href="#identity">Выставки</a>
+          <a href="#showcase">Билеты</a>
+          <a href="#posters">Архив</a>
+          <a href="#visit">Контакты</a>
+        </div>
+      </header>
+
+      <nav class="site-menu" id="site-menu" aria-hidden="true">
+        <div class="site-menu__inner">
+          <a href="#about">О проекте</a>
+          <a href="#identity">Айдентика</a>
+          <a href="#showcase">Носители</a>
+          <a href="#posters">Плакаты</a>
+          <a href="#visit">Посетить</a>
+        </div>
+      </nav>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero__backdrop">
+            <img src="./webP/1.webp" alt="Пространство выставки" />
+          </div>
+          <div class="hero__content container">
+            <div class="hero__info reveal">
+              <p class="hero__kicker">Выставочное пространство</p>
+              <h1 class="hero__museum-title">Белорусская живопись в современном прочтении</h1>
+              <p class="hero__meta">Ленина 20 • 12–19 июля • 18:00</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="manifesto container" id="about">
+          <div class="manifesto__symbol reveal">
+            <img src="./ассеты/лого.svg" alt="Знак выставки" />
+          </div>
+          <div class="manifesto__copy reveal">
+            <p>
+              Это больше, чем выставка. Это приглашение взглянуть на белорусскую живопись иначе:
+              не как на музейный экспонат прошлого, а как на живую, пульсирующую ткань культурной
+              идентичности.
+            </p>
+            <p>
+              Логотип построен как геометрический профиль человека, вдохновлённый образами Марка
+              Шагала. Он будто собран из обрывков форм, оставляя ощущение продуманной
+              незавершённости.
+            </p>
+          </div>
+        </section>
+
+        <section class="identity" id="identity">
+          <div class="container identity__grid">
+            <div class="identity__intro reveal">
+              <p class="eyebrow eyebrow--dark">Система</p>
+              <h2>Айдентика, построенная на контрасте формы, памяти и движения</h2>
+              <p>
+                В основе визуального языка лежат ясная геометрия, чистые цветовые поля,
+                ассоциативные связи с Баухаусом и белорусским орнаментом. Поэтому проект выглядит
+                одновременно музейно и современно.
+              </p>
+            </div>
+
+            <div class="identity__cards">
+              <article class="identity-card reveal">
+                <span class="identity-card__index">01</span>
+                <h3>Знак</h3>
+                <p>Геометрический профиль работает как символ лица, взгляда и живой культуры.</p>
+              </article>
+              <article class="identity-card reveal">
+                <span class="identity-card__index">02</span>
+                <h3>Палитра</h3>
+                <p>Чистые оттенки синего, красного, жёлтого, зелёного и чёрного подчёркивают ритм.</p>
+                <div class="palette">
+                  <span class="dot dot--blue"></span>
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                  <span class="dot dot--black"></span>
+                </div>
+              </article>
+              <article class="identity-card reveal">
+                <span class="identity-card__index">03</span>
+                <h3>Исследование</h3>
+                <p>Лицо, круг, отражение, орнамент и пространство стали базой для визуальной речи.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="showcase container" id="showcase">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Носители</p>
+            <h2>Один визуальный язык для плаката, билета, навигации и мерча</h2>
+          </div>
+
+          <div class="showcase__panel">
+            <div class="showcase__viewer reveal">
+              <img
+                id="showcase-image"
+                src="./webP/11.webp"
+                alt="Билеты выставки"
+                data-default-alt="Билеты выставки"
+              />
+            </div>
+            <div class="showcase__content reveal">
+              <div class="showcase__tabs" role="tablist" aria-label="Носители выставки">
+                <button class="showcase-tab is-active" type="button" data-image="./webP/11.webp" data-alt="Билеты выставки">
+                  Билеты
+                </button>
+                <button class="showcase-tab" type="button" data-image="./webP/12.webp" data-alt="Плакаты художников">
+                  Плакаты
+                </button>
+                <button class="showcase-tab" type="button" data-image="./презентация сжата в 2.5/12.png" data-alt="Навигационный куб">
+                  Навигация
+                </button>
+                <button class="showcase-tab" type="button" data-image="./презентация сжата в 2.5/13.png" data-alt="Шопер выставки">
+                  Мерч
+                </button>
+              </div>
+
+              <div class="showcase-copy">
+                <h3 id="showcase-title">Входной билет как продолжение айдентики</h3>
+                <p id="showcase-text">
+                  Билет не выглядит утилитарным элементом. Он работает как полноценный артефакт
+                  выставки: с крупной типографикой, штрихкодом, цветовым кодом и портретной
+                  графикой.
+                </p>
+              </div>
+
+              <ul class="feature-list">
+                <li>Баухаусная ясность формы и функциональности</li>
+                <li>Модульная композиция, которую легко масштабировать</li>
+                <li>Сильный контраст между музейной темой и современным подачей</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="poster-strip">
+          <div class="poster-strip__ornament" aria-hidden="true">
+            <img src="./ассеты/переход.png" alt="" />
+          </div>
+          <div class="container poster-strip__grid" id="posters">
+            <article class="poster-card poster-card--light reveal">
+              <img src="./webP/7.webp" alt="Плакат Марка Шагала" />
+              <div class="poster-card__copy">
+                <p class="eyebrow">Маркировка художника</p>
+                <h3>Марк Шагал</h3>
+                <p>Строгая сетка и контрастные полосы превращают афишу в самостоятельный объект.</p>
+              </div>
+            </article>
+
+            <article class="poster-card poster-card--dark reveal">
+              <img src="./webP/9.webp" alt="Альтернативный афишный постер" />
+              <div class="poster-card__copy">
+                <p class="eyebrow eyebrow--dark">Выразительный режим</p>
+                <h3>Свободная плакатная версия</h3>
+                <p>
+                  Айдентика выдерживает более экспрессивную графику, не теряя узнаваемость названия
+                  и события.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="quote-band">
+          <div class="container quote-band__grid">
+            <figure class="quote-band__visual reveal">
+              <img src="./webP/13.webp" alt="Плакат на синем стуле" />
+            </figure>
+            <blockquote class="quote-band__quote reveal">
+              <p>«Искусство — это прежде всего состояние души»</p>
+              <cite>Марк Шагал</cite>
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="visit container" id="visit">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Посетить</p>
+            <h2>Проект готов для презентации, лендинга события или портфолио кейса</h2>
+          </div>
+
+          <div class="visit__grid">
+            <div class="visit__card reveal">
+              <h3>Что передаёт сайт</h3>
+              <p>
+                Атмосферу выставки, глубину визуальной системы и ощущение, что белорусская живопись
+                может говорить современным языком.
+              </p>
+            </div>
+            <div class="visit__card reveal">
+              <h3>Базовые данные</h3>
+              <p>12–19 июля</p>
+              <p>18:00</p>
+              <p>Ленина 20</p>
+            </div>
+            <div class="visit__card reveal">
+              <h3>Контакты</h3>
+              <p>Telegram</p>
+              <p>Instagram</p>
+              <p>@gmail.com</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <p>Не Просто Живопись</p>
+          <p>Belzhivopis, 2025</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
