@@ -3,6 +3,10 @@ const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".site-menu");
 const menuLinks = document.querySelectorAll(".site-menu a");
 const revealItems = document.querySelectorAll(".reveal");
+const firstVideo =
+  document.querySelector("#screen-video-1 video") ||
+  document.querySelector(".media-screen--video video") ||
+  document.querySelector(".media-screen__video-frame video");
 
 const syncHeader = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 20);
@@ -39,3 +43,14 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
+
+if (firstVideo) {
+  const setFirstVideoSpeed = () => {
+    firstVideo.playbackRate = 0.25;
+    firstVideo.defaultPlaybackRate = 0.25;
+  };
+
+  setFirstVideoSpeed();
+  firstVideo.addEventListener("loadedmetadata", setFirstVideoSpeed);
+  firstVideo.addEventListener("play", setFirstVideoSpeed);
+}

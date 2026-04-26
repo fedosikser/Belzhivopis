@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>БелЖивапіс</title>
+    <title>БелЖывапіс</title>
     <meta
       name="description"
-      content="БелЖивапіс — сайт проекта по брендингу выставки белорусской живописи."
+      content="БелЖывапіс — сайт проекта по брендингу выставки белорусской живописи."
     />
     <link rel="preload" href="./шрифты/Racama.otf" as="font" type="font/otf" crossorigin />
     <link rel="stylesheet" href="./style.css" />
@@ -24,8 +24,7 @@
           </button>
 
           <a class="brand" href="./index.html" aria-label="Главная страница">
-            <span class="brand__title">БелЖивапіс</span>
-            <span class="brand__subtitle">Минск</span>
+            <img class="brand__logo" src="./ассеты/лого.svg" alt="БелЖивапіс" />
           </a>
 
           <button class="search-toggle" type="button" aria-label="Поиск">
@@ -35,48 +34,80 @@
         </div>
 
         <nav class="site-header__bottom" aria-label="Основная навигация">
-          <a href="#screen-2">Новости</a>
-          <a href="#screen-5">Выставки</a>
-          <a href="#tickets">Билеты</a>
-          <a href="#screen-12">Архив</a>
-          <a href="#footer">Контакты</a>
+          <a href="#hero">Главная</a>
+          <a href="#screen-2">Концепция</a>
+          <a href="#screen-7">Плакаты</a>
+          <a href="#screen-12">Билеты</a>
+          <a href="#screen-12">Носители</a>
         </nav>
       </header>
 
       <nav class="site-menu" id="site-menu" aria-hidden="true">
-        <div class="site-menu__inner">
-          <a href="./index.html">Главная</a>
-          <a href="#screen-2">Концепция</a>
-          <a href="#screen-7">Плакаты</a>
-          <a href="#tickets">Билеты</a>
-          <a href="#screen-12">Носители</a>
+        <div class="site-menu__panel">
+          <div class="site-menu__features">
+            <a class="site-menu__feature" href="#screen-7">
+              <img src="./webP/7.webp" alt="Плакаты выставки" />
+              <span>Плакаты</span>
+            </a>
+            <a class="site-menu__feature" href="#screen-12">
+              <img src="./webP/12.webp" alt="Носители выставки" />
+              <span>Носители</span>
+            </a>
+          </div>
         </div>
       </nav>
 
       <main>
-        <section class="hero" id="hero">
+    
+         <section class="hero" id="hero">
           <h1 class="visually-hidden">БелЖивапіс Минск</h1>
           <div class="hero__backdrop">
             <img src="./webP/1.webp" alt="Выставочный зал БелЖивапіс" />
           </div>
         </section>
 
-        <section class="media-screen media-screen--text reveal" id="screen-2">
-          <img src="./webP/2.webp" alt="Описание выставки" />
+        <section class="media-screen media-screen--copy reveal" id="screen-2">
+          <div class="copy-block copy-block--intro">
+          
+          <video class="logo-overlay" autoplay muted loop playsinline preload="metadata">
+            <source src="./webM/лого_аним(поверх 2 ставить).webm" type="video/webm" />
+          </video>
+
+            <p>
+              Это больше, чем выставка. Это приглашение взглянуть на белорусскую живопись иначе
+              не как на музейный экспонат прошлого, а как на живую, пульсирующую ткань нашей
+              культурной идентичности.
+            </p>
+            <p>
+              Логотип выставки - геометричный профиль человека, вдохновлённый образами Марка
+              Шагала. Он будто собран из обрывков форм, оставляя ощущение продуманной
+              незавершённости.
+            </p>
+          </div>
+          
         </section>
 
         <section class="media-screen media-screen--video reveal" id="screen-video-1">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="./webM/1.webm" type="video/webm" />
-          </video>
+          <div class="media-screen__video-frame">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="./webM/1.webm" type="video/webm" />
+            </video>
+          </div>
         </section>
 
         <section class="media-screen reveal" id="screen-5">
           <img src="./webP/5.webp" alt="Логотип выставки на холсте" />
         </section>
 
-        <section class="media-screen media-screen--text reveal" id="screen-6">
-          <img src="./webP/6.webp" alt="Исследование и сбор ассоциаций" />
+        <section class="media-screen media-screen--copy media-screen--ideas reveal" id="screen-6">
+          
+          <div class="copy-block copy-block--ideas">
+            <img class="copy-block__line" src="./ассеты/линия.svg" alt="" aria-hidden="true" />
+            <p>
+              Исследование и сбор ассоциаций - это первый шаг в рождении уникального образа.
+              Здесь рождаются смыслы, эмоции и символы, которые станут сердцем будущего логотипа.
+            </p>
+          </div>
         </section>
 
         <section class="media-screen reveal" id="screen-7">
@@ -91,32 +122,14 @@
           <img src="./webP/9.webp" alt="Альтернативный постер проекта" />
         </section>
 
-        <section class="media-screen media-screen--text reveal" id="screen-10">
-          <img src="./webP/10.webp" alt="Описание дизайна входного билета" />
-        </section>
-
-        <section class="tickets reveal" id="tickets">
-          <div class="section-head">
-            <p>БИЛЕТЫ</p>
-            <h2>СЕРИЯ ВХОДНЫХ БИЛЕТОВ И ВАРИАЦИЙ АЙДЕНТИКИ</h2>
-          </div>
-
-          <div class="tickets__grid">
-            <figure class="ticket-card ticket-card--wide">
-              <img src="./webP/11.webp" alt="Серия билетов выставки" />
-            </figure>
-            <figure class="ticket-card">
-              <img src="./webP/11_clear.webp" alt="Чистая композиция билетов" />
-            </figure>
-            <figure class="ticket-card">
-              <img src="./webP/новый билет 1.webp" alt="Вариант билета 1" />
-            </figure>
-            <figure class="ticket-card">
-              <img src="./webP/новый билет 2.webp" alt="Вариант билета 2" />
-            </figure>
-            <figure class="ticket-card">
-              <img src="./webP/новый билет 3.webp" alt="Вариант билета 3" />
-            </figure>
+        <section class="media-screen media-screen--copy reveal" id="screen-10">
+          <div class="copy-block copy-block--ticket">
+            <img class="copy-block__line" src="./ассеты/линия.svg" alt="" aria-hidden="true" />
+            <p>
+              Для мероприятия разработаны варианты дизайна входного билета. Они служат дополнением
+              к общей айдентике, частично вдохновлённой принципами Bauhaus - ясной геометрией,
+              простыми формами и функциональностью.
+            </p>
           </div>
         </section>
 
@@ -128,18 +141,35 @@
           <img src="./webP/13.webp" alt="Постер выставки на синем стуле" />
         </section>
 
-        <section class="media-screen media-screen--video media-screen--logo reveal" id="screen-video-logo">
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="./webM/лого_аним(поверх 2 ставить).webm" type="video/webm" />
-          </video>
+        <section class="media-screen media-screen--copy reveal" id="screen-14">
+          <div class="copy-block copy-block--palette">
+            <p>
+              Цветовая палитра выбрана не случайно. Чистые оттенки отсылают к визуальной строгости
+              и функциональности, характерным для выбранной эстетики.
+            </p>
+            <div class="palette-dots" aria-label="Цветовая палитра проекта">
+              <span class="palette-dots__dot palette-dots__dot--blue"></span>
+              <span class="palette-dots__dot palette-dots__dot--red"></span>
+              <span class="palette-dots__dot palette-dots__dot--yellow"></span>
+              <span class="palette-dots__dot palette-dots__dot--green"></span>
+              <span class="palette-dots__dot palette-dots__dot--black"></span>
+            </div>
+          </div>
+        </section>
+
+      
+        <section class="signature-block reveal" aria-label="Подпись автора">
+          <img src="./ассеты/подпись.svg" alt="Подпись" />
         </section>
       </main>
 
       <footer class="site-footer" id="footer">
         <div class="site-footer__inner">
-          <p>БЕЛЖИВАПІС</p>
-          <p>ПРОЕКТ БРЕНДИНГА ВЫСТАВКИ</p>
-          <p>2025</p>
+          <p>БЕЛЖЫВАПІС</p>
+          <p class="site-footer__center">
+            <a href="https://www.behance.net/fedosov" target="_blank" rel="noreferrer">BEHANCE: FEDOSOV</a>
+          </p>
+          <p>FEDOSIKSER@GMAIL.COM</p>
         </div>
       </footer>
     </div>
